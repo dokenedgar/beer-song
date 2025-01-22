@@ -27,11 +27,9 @@ Take one down and pass it around, {} bottles of beer on the wall.",
 }
 
 pub fn sing(start: u32, end: u32) -> String {
-    // todo!("sing verses {start} to {end}, inclusive")
     let mut resultant_verses: String = String::from("");
     let mut start_mut = start;
     loop {
-        // println!("IN LOOP: {}, {}", start_mut, end);
         if end <= start_mut {
             resultant_verses += &verse(start_mut);
             if start_mut > 0 {
@@ -39,8 +37,6 @@ pub fn sing(start: u32, end: u32) -> String {
             } else {
                 break;
             }
-
-            println!("{start_mut}");
         } else {
             break;
         }
